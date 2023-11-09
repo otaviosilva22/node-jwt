@@ -92,7 +92,6 @@ GET: http://localhost:8081/decoder
 {
   "decoder": {
     "user": "<user>",
-    "password": "<password>",
     "iat": <>,
     "exp": <>
   }
