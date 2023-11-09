@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  
+  node:
+    image: "node:18"
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "8081:8081"
+    command: "npm start"
+
+  redis:
+    image: "redis"
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
