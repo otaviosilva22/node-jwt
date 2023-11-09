@@ -18,7 +18,7 @@ No Node.js, a biblioteca <a href='https://www.npmjs.com/package/jsonwebtoken'>js
 app.post("/encoder", (req, res) => {
     try{      
         const {user, password} = req.body;
-        const token = jwt.sign({user, password}, 'secret', { expiresIn: '1h' });
+        const token = jwt.sign({user}, 'secret', { expiresIn: '1h' });
         return res.status(200).json({token})
     }catch(error){
         return res.status(500).json({error: error.message});
