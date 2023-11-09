@@ -45,8 +45,6 @@ app.get('/decoder', (req, res)=>{
 npm install
 ```
 
-### Terminal Node
-
 ```bash
 npm start
 
