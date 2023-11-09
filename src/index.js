@@ -2,7 +2,7 @@ const express = require("express");
 const app = express().use(express.json());
 const jwt = require('jsonwebtoken');
 
-app.post("/jwtexample", (req, res) => {
+app.post("/encoder", (req, res) => {
     try{      
         const {user, password} = req.body;
         const token = jwt.sign({user}, 'secret', { expiresIn: '1h' });
